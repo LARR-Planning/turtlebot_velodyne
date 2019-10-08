@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<launch>
+    <param name="robot_description" command="$(find xacro)/xacro.py '$(find velodyne_description)/urdf/turtlebot_velodyne.urdf.xacro'" />
+
+    <node pkg="gazebo_ros" type="spawn_model" name="spawn_model" args="-urdf -param /robot_description -model turtlebot_velodyne -x 7 -y 1 -Y 3.141592 ">
+    <!-- <remap from="/velodyne_points" to="cloud_in" /> -->
+    </node>
+
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+      <param name="publish_frequency" type="double" value="30.0" />
+    </node>
+
+
+</launch>

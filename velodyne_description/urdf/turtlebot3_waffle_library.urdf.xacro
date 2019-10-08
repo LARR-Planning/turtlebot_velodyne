@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+  The complete turtlebot library of xacros for easy reference
+ -->
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <!-- General -->
+  <!-- <xacro:include filename="$(find mobile_robot_simulation)/urdf/common_properties.xacro"/> -->
+  <xacro:include filename="$(find velodyne_description)/urdf/turtlebot3_waffle.urdf.xacro"/>
+
+
+  <!-- 2D Hokuyo Laser -->
+  <xacro:include filename="$(find velodyne_description)/urdf/hokuyo.urdf.xacro"/>
+</robot>
